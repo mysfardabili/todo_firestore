@@ -1,4 +1,4 @@
-# 📱 TaskFlow — To-Do List Real-time Berbasis Cloud
+# TaskFlow — To-Do List Real-time Berbasis Cloud
 
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
 [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com)
@@ -10,37 +10,37 @@ Aplikasi manajemen tugas (*To-Do List*) modern berbasis cloud yang dibangun meng
 
 ---
 
-## 🌟 Fitur Unggulan
+## Fitur Unggulan
 
-### 1. 🔐 Autentikasi Pengguna (Firebase Auth)
+### 1. Autentikasi Pengguna (Firebase Auth)
 - Pendaftaran akun baru (*Register*) dan masuk (*Login*) menggunakan **Email & Password**.
 - Manajemen state autentikasi otomatis dan reaktif via `StreamBuilder` (`authStateChanges()`).
 - Fitur *show/hide password*, validasi form interaktif, dan penanganan pesan error lengkap berbahasa Indonesia.
 - Tombol *Logout* aman dengan dialog konfirmasi.
 
-### 2. 👤 Database Terisolasi Per-Pengguna (Data Privacy)
+### 2. Database Terisolasi Per-Pengguna (Data Privacy)
 - Setiap pengguna memiliki ruang data tugas pribadi di path Firestore:
   $$\text{users/}\{uid\}\text{/tasks/}\{taskId\}$$
 - Mencegah kebocoran data antar-pengguna dengan dukungan **Firestore Security Rules** yang ketat (`request.auth.uid == userId`).
 
-### 3. ⚡ Sinkronisasi Cloud Real-time
+### 3. Sinkronisasi Cloud Real-time
 - Operasi CRUD (*Create, Read, Update, Delete*) tersinkronisasi instan antar-perangkat menggunakan `StreamBuilder`.
 - Menggunakan `FieldValue.serverTimestamp()` untuk pencatatan waktu yang konsisten dari server Google.
 
-### 4. 🎨 Desain UI/UX Modern & Responsif (Material 3)
+### 4. Desain UI/UX Modern & Responsif (Material 3)
 - **Progress Dashboard Card:** Menampilkan persentase kemajuan dan jumlah tugas yang telah diselesaikan.
 - **Filter Tab Cepat:** Filter tugas instan (*Semua*, *Aktif*, *Selesai*) lengkap dengan badge counter.
 - **Kartu Tugas Interaktif:** Checkbox animasi, coretan teks saat selesai, dan swipe-to-delete.
 - **Empty State Estetik:** Ilustrasi dan pesan ramah saat daftar tugas kosong.
 
-### 5. ⭐ Fitur Tambahan (Nilai Plus)
-- ✏️ **Edit Tugas:** Pembaruan judul tugas, catatan detail, dan tingkat prioritas secara real-time.
-- 🏷️ **Indikator Prioritas:** Pilihan prioritas tugas (*Tinggi*, *Sedang*, *Rendah*) dengan aksen warna khusus.
-- 📅 **Format Waktu & Tanggal:** Konversi timestamp server menjadi format tanggal yang ramah dibaca (contoh: *29 Okt 2026 • 11:30*).
+### 5. Fitur Tambahan (Nilai Plus)
+- **Edit Tugas:** Pembaruan judul tugas, catatan detail, dan tingkat prioritas secara real-time.
+- **Indikator Prioritas:** Pilihan prioritas tugas (*Tinggi*, *Sedang*, *Rendah*) dengan aksen warna khusus.
+- **Format Waktu & Tanggal:** Konversi timestamp server menjadi format tanggal yang ramah dibaca (contoh: *29 Okt 2026 • 11:30*).
 
 ---
 
-## 🏗️ Struktur Proyek
+## Struktur Proyek
 
 ```plaintext
 todo_firestore/
@@ -65,7 +65,7 @@ todo_firestore/
 
 ---
 
-## 🛡️ Aturan Keamanan Firestore (*Security Rules*)
+## Aturan Keamanan Firestore (*Security Rules*)
 
 Aturan berikut diterapkan pada Firestore Console untuk memastikan setiap pengguna hanya memiliki akses baca dan tulis pada datanya sendiri:
 
@@ -82,7 +82,7 @@ service cloud.firestore {
 
 ---
 
-## 🚀 Panduan Memulai (*Getting Started*)
+## Panduan Memulai (*Getting Started*)
 
 ### Prasyarat:
 - [Flutter SDK](https://flutter.dev) (versi 3.20.0 atau lebih baru)
@@ -115,7 +115,7 @@ service cloud.firestore {
 
 ---
 
-## 📦 Paket yang Digunakan
+## Paket yang Digunakan
 
 | Package | Fungsi |
 |---|---|
@@ -123,12 +123,3 @@ service cloud.firestore {
 | [`cloud_firestore`](https://pub.dev/packages/cloud_firestore) | Database dokumen real-time NoSQL |
 | [`firebase_auth`](https://pub.dev/packages/firebase_auth) | Manajemen login dan pendaftaran pengguna |
 | [`intl`](https://pub.dev/packages/intl) | Pemformatan tanggal dan waktu lokal |
-
----
-
-## 👤 Pengembang
-
-- **Nama:** Arbi
-- **GitHub:** [@mysfardabili](https://github.com/mysfardabili)
-- **Mata Kuliah:** Pemrograman Mobile (Praktikum 3 — Cloud Firestore)
-- **Institusi:** Universitas Ahmad Dahlan
